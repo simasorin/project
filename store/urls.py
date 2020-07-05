@@ -1,0 +1,11 @@
+from django.urls import path
+
+from . import views
+
+urlpatterns = (
+    # Leave as empty string for base url
+    path('store/', views.store, name="store"),
+    path('cart/', views.cart, name="cart"),
+    path('add_to_cart/<str:product>/', views.add_to_cart, name="add"),
+    path('delete_to_cart/<str:item>/', views.delete_to_cart, name="delete"),
+)

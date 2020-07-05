@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+           <title>Cart</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/master.css' %}">
+
+     </head>
+    <body>
+            <div class="card">
+                 <table>
+                     <tr>
+                         <td><a href = "{% url 'store'%}" class ="btnAddCart"><strong>Continue shopping</strong></a></td>
+                         <td><strong>Total Items: {{order.get_cart_items}}</strong></td>
+                         <td><strong>Total Price: {{order.get_cart_total|floatformat:2}}$</strong></td>
+                     </tr>
+                 </table>
+            </div>
+            {%for item in items%}
+                 <div class = "card">
+                     <table>
+                             <th><img class = "thumbnail" src="{{item.product.image.url}}"></th>
+                             <th>Items</th>
+                             <th>Price</th>
+                             <th>Quantity</th>
+                             <th>Total</th>
+                         </tr>
+                         <tr>
+                             <td></td>
+                             <td><strong>{{item.product.name}}</strong></td>
+                             <td><strong>{{item.product.price|floatformat:2}}$</strong></td>
+                             <td><strong>{{item.quantity}}</strong></td>
+                             <td><strong>{{item.get_total|floatformat:2}}$</strong></td>
+                             <th><a href = "{%url 'delete' item.id%}" class ="btnAddCart">Delete</a></th>
+                         </tr>
+                     </table>
+                 </div>
+            {%endfor%}
+     </body>
+</html>

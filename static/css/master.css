@@ -1,0 +1,102 @@
+body{
+background-color: #fff;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.thumbnail{
+    width: 200px;
+    height: 200px;
+}
+
+.carticon{
+    width: 40px;
+}
+
+ul {
+  list-style-type: none;
+  margin: -8px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #3366CC;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.card {
+  margin: 30px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px #333;
+
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 30px 50px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+table {
+  width: 100%;
+}
+
+th, td {
+  padding: 42px;
+  text-align: left;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.btnAddCart{
+  background-color: #3366cc;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnAddCart:hover{
+  background-color: red;
+}
+
+h1{
+  background-color: #3366cc;
+  color: white;
+  margin: 20px;
+}

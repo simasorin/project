@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Store</title>
+        <div class = "row">
+            <link rel="stylesheet" type="text/css" href="{% static 'css/master.css' %}">
+            <ul>
+                <li><h1>WatchShop</h1></li>
+                <li><a href = "{% url 'cart' %}"> <img src="{% static 'images/cart.png' %}" class = "carticon"></a></li>
+
+            </ul>
+        </div>
+     </head>
+     <body>
+        <div class = "row">
+            {%for product in products%}
+            <div class="column">
+                     <img class = "thumbnail" src="{{product.image.url}}">
+                     <h2><strong>{{product.name}}</strong></h2>
+                     <a href = "{% url 'add' product.id%}" class = "btnAddCart">Add to Cart</a>
+                     <br><h4 style="display: inline-block">Price: {{product.price}}$</h4>
+            </div>
+            {%endfor%}
+        </div>
+     </body>
+</html>
